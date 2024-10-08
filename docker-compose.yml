@@ -4,4 +4,18 @@ services:
     build: ./server1
     ports:
       - "8199:8199"
+    volumes:
+      - type: bind
+        source: ./server1/server.mjs
+        target: /usr/app/server.mjs
     command: "node server.mjs"
+  server2:
+    container_name: server2
+    build: ./server2
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./server2/server.py
+        target: /app/server.py
+    command: "python server.py"
