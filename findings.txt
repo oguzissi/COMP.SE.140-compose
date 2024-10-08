@@ -1,0 +1,3 @@
+Docker containers share file system with the host; shown in this exercise clearly by the output of "ps" command run on my own machine on the containers.
+
+Also, network interfaces are also shared with the host so a mapping can be set with the host to the container.
