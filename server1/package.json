@@ -1,0 +1,22 @@
+{
+  "name": "comp.se.140-compose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oguzissi/COMP.SE.140-compose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oguzissi/COMP.SE.140-compose/issues"
+  },
+  "homepage": "https://github.com/oguzissi/COMP.SE.140-compose#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "ip": "^2.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+services:
+  server1:
+    container_name: server1
+    build: ./server1
+    ports:
+      - "8199:8199"
+    command: "node server.mjs"
