@@ -1,9 +1,10 @@
 import express from "express";
+import axios from "axios";
 import ip from "ip";
 import { execSync } from "child_process";
 
 const app = express();
-const port = 8199;
+const port = 3000;
 
 function getSystemInfo() {
     const ip_address = ip.address();
@@ -19,14 +20,14 @@ function getSystemInfo() {
     }
 }
 
-app.get('/', (req, res) => {
-    const ownResponse = getSystemInfo();
+app.get('/', async (req, res) => {
+    const server1Response = getSystemInfo();
+    const server2Response = await axios.get('http://server2:5000/');
 
     res.send({
-        service1: ownResponse
+        server1: server1Response,
+        server2: server2Response.data,
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server1 is running on port ${port}`);
-});
+app.listen(port);
